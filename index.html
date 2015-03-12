@@ -1,29 +1,108 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
+<html lang="en">
+<head>
+	<title>You knew it all along</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="main.css">
 
-<html>
-<head> 
-<!--This is a comment. Comments are not displayed in the browser-->
-<title>You knew it all along
-</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
-    <script type="text/javascript">
-        function validate(){
-            alert("Yes");
-        }
+	<script type="text/javascript">
 
+	    function PreviewImage() {
+	        var oFReader = new FileReader();
+	        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
 
-    </script>
-</head>
-<body >
-<form name="myForm">
-    <input type="file" accept="image/*" capture="camera">
-</form>
-
-
-<script type="text/javascript">
+	        oFReader.onload = function (oFREvent) {
+	            document.getElementById("uploadPreview").src = oFREvent.target.result;
+	        };
+	    };
 
 </script>
+	
+</head>
 
+<body>
+	<div id="big_wrapper">
+		<header id="top_header">
+			<h1>Welcome to XY's first site!</h1>
+		</header>
+		
+		<nav id="top_menu">
+			<ul class="Navigation">
+				<li>Home</li>
+				<li>Movies</li>
+				<li>Songs</li>
+			</ul>
+		</nav>
+		
+			<div id="new_div">
+				<section id="main_section">
+					<article>
+						<header>
+							<hgroup>
+							<h1>Title of Article</h1>
+							<h2>Subtitle For Article</h2>
+							</hgroup>
+						</header>
+						<p>This is the first article ever! This is the first article ever! 
+						This is the first article ever! This is the first article ever! This is the first article ever! 
+						This is the first article ever! This is the first article ever! This is the first article ever! 
+						This is the first article ever! This is the first article ever! This is the first article ever! 
+						This is the first article ever! This is the first article ever! This is the first article ever! 
+						This is the first article ever! This is the first article ever! This is the first article ever! </p>
+						<footer>
+							<p>-Written by Nauxlim 23/12/1991</p>
+						</footer>
+					</article>
+					
+					<article>
+						<header>
+							<hgroup>
+							<h1>Title of Article</h1>
+							<h2>Subtitle For Article</h2>
+							</hgroup>
+						</header>
+						<p>This is the second article ever! This is the second article ever! 
+						This is the second article ever! This is the second article ever! This is the second article ever! 
+						This is the second article ever! This is the second article ever! This is the second article ever! 
+						This is the second article ever! This is the second article ever! This is the second article ever! 
+						This is the second article ever! This is the second article ever! This is the second article ever! 
+						This is the second article ever! This is the second article ever! This is the second article ever! </p>
+						<footer>
+							<p>-Written by Nauxlim 23/12/1991</p>
+						</footer>
+					</article>
+					<article>
+						<header>
+							<hgroup>
+							<h1>Camera</h1>
+							<h2>Photo uploading?</h2>
+							</hgroup>
+						</header>
+						
+
+						
+						<input id="uploadImage" type="file" accept="image/*" capture="camera" onchange="PreviewImage();";>
+
+						<br />
+						<img id="uploadPreview" style="width: 100px; height: 100px;" />
+
+
+
+						<footer>
+							<p>-Uploaded by Nauxlim 23/12/1991</p>
+						</footer>
+					</article>
+				</section>
+				
+				<aside id="side_news">
+					<h4>News</h4>
+					Reviews say this site is the best
+				</aside>
+			</div>
+		
+		<footer id="the_footer">
+			Copyright nauxlimxy 2015
+		</footer>
+	</div>
 </body>
 </html>
